@@ -62,3 +62,58 @@ function b() {
 console.log(window.a);
 console.log(window.b);
 ```
+
+### Creation and Hoisting
+
+The following code examples return different results:
+
+```
+var a = ‘hello’;
+function b() {
+  console.log(‘in b’);
+}
+
+b(); // 'in b'
+console.log(a); // 'hello'
+```
+
+```
+b(); // 'in b'
+console.log(a); // undefined ... you probably were expecting an error!
+
+var a = ‘hello’;
+function b() {
+  console.log(‘in b’);
+}
+```
+
+```
+b(); // 'in b'
+console.log(a); // ReferenceError: a is not defined
+
+// var a = ‘ciccio’;  <== removed declaration of a
+function b() {
+  console.log(‘in b’);
+}
+```
+Lets try to understand why they return different results. 
+
+* **Hoisting** is often explained as if the JS engine moves code around..this is wrong!
+* Before the code gets executed line by line, the JS engine already allocated memory for your functions and variables, this is called **Hoisting**
+  * Functions and variable are threated slightly differently
+    * Functions: entirely placed in memory space
+    * Variables: a placeholder ( *undefined* ) is used for variables
+      * undefined = I don’t know what the value is now
+  * When the code starts to be executed line by line the variable are present in memory, but they might not have a value assigned to them. Let's revisit one of the previous examples:
+
+```
+// hoisting set a placeholder for 'a' with value undefined and place the whole 'b' function in memory
+b(); // 'in b'
+console.log(a); // undefined ... now it should be clear why!
+
+var a = ‘hello’; // only now a value is explicitely assigned to 'a'
+function b() {
+  console.log(‘in b’);
+}
+```
+   
