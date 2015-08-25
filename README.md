@@ -18,7 +18,7 @@ Lexical environment
 * Where a statement, varaible declaration, etc sist in your code
 * The meaning might change depending on the position (will explain later why)
 * Ex:
-```
+```javascript
   var a = 'Hey hey';
   console.log(a);
   
@@ -60,7 +60,7 @@ Execution context
     * If you are in the global environment is *null* 
 * Everything not included in a function is Global
   * Running the following code it is possible to see that *a* and *b* belong to the global context, i.e.: *window*
-```
+```javascript
 var a = ‘Hello’;
 function b() {
 }
@@ -72,7 +72,7 @@ console.log(window.b);
 
 The following code examples return different results:
 
-```
+```javascript
 var a = ‘hello’;
 function b() {
   console.log(‘in b’);
@@ -82,7 +82,7 @@ b(); // 'in b'
 console.log(a); // 'hello'
 ```
 
-```
+```javascript
 b(); // 'in b'
 console.log(a); // undefined ... you probably were expecting an error!
 
@@ -92,7 +92,7 @@ function b() {
 }
 ```
 
-```
+```javascript
 b(); // 'in b'
 console.log(a); // ReferenceError: a is not defined
 
@@ -102,7 +102,7 @@ function b() {
 }
 ```
 > **SYNTAX:** function declaration
-> ```
+> ```javascript
 > function name() {
 > // body here
 > }
@@ -118,7 +118,7 @@ Lets try to understand why they return different results.
       * undefined = I don’t know what the value is now
   * When the code starts to be executed line by line the variable are present in memory, but they might not have a value assigned to them. Let's revisit one of the previous examples:
 
-```
+```javascript
 // hoisting set a placeholder for 'a' with value undefined and place the whole 'b' function in memory
 b(); // 'in b'
 console.log(a); // undefined ... now it should be clear why!
