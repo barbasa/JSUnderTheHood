@@ -3,6 +3,8 @@ JS under the hood
 
 Some notes I took while trying to understand how JS works under the hood.
 
+The snippet of code can be easily executed here: http://jsbin.com/?js,console
+
 Important concept to understand before starting:
 
 Syntax parser
