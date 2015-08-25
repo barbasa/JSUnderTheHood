@@ -28,6 +28,9 @@ Lexical environment
   // ==> Prints 'undefined'
 ```
 
+> **SYNTAX:** variable declaration
+> ```var a = 'hello';````
+
 Execution context
 -----------------
 * "Wrapper to help the code which is running"
@@ -96,6 +99,13 @@ function b() {
   console.log(‘in b’);
 }
 ```
+> **SYNTAX:** function declaration
+> ```
+> function name() {
+> // body here
+> }
+> ```
+
 Lets try to understand why they return different results. 
 
 * **Hoisting** is often explained as if the JS engine moves code around..this is wrong!
