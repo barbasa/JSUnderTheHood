@@ -132,6 +132,10 @@ function b() {
 ```
 > BEST PRACTICE: usually the JS engine assigns *undefined* to a variable when no values have been assigned to it. It is better not to explicitely assign it to a vaiable, otherwise it will be difficult to understand if the *undefined* value comes from the JS engine or the logic of the code.
 
+To recap the previous section...the *code execution* is composed by 2 phases:
+* *creation phase*: creation of the execution context and the hoisting happens
+* *execution phase*: code is executed line by line
+
 Key value pairs: Objects
 ------------------------
 An object in JS is simply a key value pair, eg:
