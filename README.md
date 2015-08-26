@@ -158,7 +158,14 @@ This is the whole stack created:
 | a() execution context     |
 | Global execution context  |
 
-#TODO: explain how creation happens
+
+They way this happen is the following:
+* **Global Creation phase**: Global execution context is created, memory for functions and variable allocated
+* **Global Execution phase**: Code in global execution context is executed
+* **a() creation phase**: Triggered when a() is invoked. a() execution context is created, memory for functions and variable allocated
+* **a() execution phase**: Code in a() execution context is executed
+* **b() creation phase**: Triggered when b() is invoked in a(). b() execution context is created, memory for functions and variable allocated
+* **b() execution phase**: Code in b() execution context is executed
 
 Key value pairs: Objects
 ------------------------
