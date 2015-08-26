@@ -64,8 +64,10 @@ Execution context
 var a = ‘Hello’;
 function b() {
 }
-console.log(window.a);
-console.log(window.b);
+console.log(window.a); // Same as this.a in the global execution context
+console.log(this.a);
+console.log(window.b); // Same as this.b in the global execution context
+console.log(this.b);
 ```
 
 ### Creation and Hoisting
