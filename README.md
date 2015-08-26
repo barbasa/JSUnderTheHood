@@ -196,6 +196,7 @@ This is the execution stack created:
 | Global execution context  - **myVar = 1**|
 
 When executing that code the output we will have is: 1, 2, undefined.
+Each version of *myVar* is visible in its own execution context.
 
 Key value pairs: Objects
 ------------------------
