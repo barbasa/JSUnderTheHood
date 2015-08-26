@@ -136,6 +136,30 @@ To recap the previous section...the *code execution* is composed by 2 phases:
 * *creation phase*: creation of the execution context and the hoisting happens
 * *execution phase*: code is executed line by line
 
+Function invocation and executions stack
+----------------------------------------
+Functions are invoked in JS by putting () at the end of the function name.
+Every time a function is called a new **execution stack** is created, eg:
+
+```javascript
+function b() {
+}
+function a() {
+  b();
+}
+a();
+
+```
+This is the whole stack created:
+
+| Execution stack  |
+|---|
+| b() execution context     |
+| a() execution context     |
+| Global execution context  |
+
+#TODO: explain how creation happens
+
 Key value pairs: Objects
 ------------------------
 An object in JS is simply a key value pair, eg:
