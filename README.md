@@ -167,6 +167,36 @@ They way this happen is the following:
 * **b() creation phase**: Triggered when b() is invoked in a(). b() execution context is created, memory for functions and variable allocated
 * **b() execution phase**: Code in b() execution context is executed
 
+Variable scope
+--------------
+Variable scope is where a variable live, where it is visible
+
+```javascript
+function b() {
+    var myVar;
+    console.log(myVar);
+}
+
+function a() {
+    var myVar = 2;
+    console.log(myVar);
+    b();
+}
+
+var myVar = 1;
+console.log(myVar);
+a();
+```
+This is the execution stack created:
+
+| Execution stack  |
+|---|
+| b() execution context     - **myVar = undefined**|
+| a() execution context     - **myVar = 2**|
+| Global execution context  - **myVar = 1**|
+
+When executing that code the output we will have is: 1, 2, undefined.
+
 Key value pairs: Objects
 ------------------------
 An object in JS is simply a key value pair, eg:
