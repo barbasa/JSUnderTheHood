@@ -128,4 +128,27 @@ function b() {
   console.log(‘in b’);
 }
 ```
-   
+> BEST PRACTICE: usually the JS engine assigns *undefined* to a variable when no values have been assigned to it. It is better not to explicitely assign it to a vaiable, otherwise it will be difficult to understand if the *undefined* value comes from the JS engine or the logic of the code.
+
+Key value pairs: Objects
+------------------------
+An object in JS is simply a key value pair, eg:
+
+```javascript
+var currentPerson = {
+  name: 'smith',
+  surname: 'john'
+};
+console.log(currentPerson);
+```
+An object can also be created this way:
+
+```javascript
+var currentPerson = new Object();
+currentPerson.name = 'smith';
+currentPerson.surname = 'john';
+```
+
+> BEST PRACTICE: The first way of creating an object is called *object literal notation* and it is preferred to the second.
+
+The 2 ways are equivalent. The former is recognised to be quicker and it requires less typing than the latter.
