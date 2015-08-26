@@ -213,7 +213,33 @@ function a() {
 var myVar = 1;
 a();
 ```
-The output will be **1**!
+The output will be **1**! This is the reason why:
+
+![alt text](https://github.com/barbasa/JSUnderTheHood/blob/master/assets/ScopeChain.png  "Scope Chain")
+
+Previously we said that when the *execution context* is created a link to *the outer environment* is also created.
+The outer environment of the *b() execution context* is the *global execution context*.
+This depend on the *lexical environment*. In this case the function b() lexically sit on top of the global environment.
+
+In conclusion: 
+* the JS engine **do care** about the lexical environment when it comes to outer references
+* when a variable is used if it is not find in the current execution context, the JS engine look it up in the outer environment execution context
+* this whole chain of outer environmet is called **scope chain**
+
+If the code was like this:
+
+```javascript
+function a() {
+    function b() {
+      console.log(myVar);
+    }
+    var myVar = 2;
+    b();
+}
+var myVar = 1;
+a();
+```
+The output would have been **2**, since in this case the outer environment of b() is the execution context of a(). 
 
 Key value pairs: Objects
 ------------------------
