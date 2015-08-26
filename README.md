@@ -37,18 +37,8 @@ Execution context
 -----------------
 * "Wrapper to help the code which is running"
 
-```
-|----------------------------------------------------------------------|
-| Execution context (Global)                                           |
-|  |--------------| |--------------| |-----------------------------|   |
-|  |Global Object | |    'This'    | | Link to outer environment   |   |
-|  |--------------| |--------------| |-----------------------------|   |
-|                                                                      |
-|  |------------------------------------------------|                  |
-|  |            Code                                |                  |
-|  |------------------------------------------------|                  |
-|----------------------------------------------------------------------|
-```
+![alt text](https://github.com/barbasa/JSUnderTheHood/blob/master/assets/ExecutionContext.png  "Execution Context")
+
 * Base execution context is the **Global Execution Context**
   * Accessible from everywhere in the code
 * *JS engine* creates:
