@@ -198,6 +198,23 @@ This is the execution stack created:
 When executing that code the output we will have is: 1, 2, undefined.
 Each version of *myVar* is visible in its own execution context.
 
+Scope chain
+-----------
+What are we gonna expect from this ?
+
+```javascript
+function b() {
+    console.log(myVar);
+}
+function a() {
+    var myVar = 2;
+    b();
+}
+var myVar = 1;
+a();
+```
+The output will be **1**!
+
 Key value pairs: Objects
 ------------------------
 An object in JS is simply a key value pair, eg:
