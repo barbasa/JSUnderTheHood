@@ -159,7 +159,7 @@ They way this happen is the following:
 
 Variable scope
 --------------
-Variable scope is where a variable live, where it is visible
+Variable scope is where a variable is available in the code
 
 ```javascript
 function b() {
