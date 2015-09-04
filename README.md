@@ -7,6 +7,9 @@ The snippet of code can be easily executed here: http://jsbin.com/?js,console
 
 Important concept to understand before starting:
 
+Executions contexts, Lexical environments, scopes
+===================================================
+
 Syntax parser
 -------------
 * Reads your code
@@ -253,3 +256,19 @@ currentPerson.surname = 'john';
 > BEST PRACTICE: The first way of creating an object is called *object literal notation* and it is preferred to the second.
 
 The 2 ways are equivalent. The former is recognised to be quicker and it requires less typing than the latter.
+
+Types and operators
+===================
+
+JS is a dynamic typed language.
+
+Primitive types
+---------------
+There are 6 primitive types:
+* **undefined**: lack of existence from the JS engine.
+* **null**: lack of existence from your code. You should set your variable to *null* if you wanna represent a lack of existance, not to *undefined*.
+* **boolean**: true or false
+* **number**: floating point number. It is the only numeric type.
+* **string**: sequence of characters.
+* **symbol**: used in ES6.
+
