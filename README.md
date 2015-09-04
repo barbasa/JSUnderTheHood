@@ -298,4 +298,11 @@ var b =     // Assignement has a precedence of 3
 ```
 Subtraction and addition have the same precedence. In order to decide which one to call first we need to check the associativity, which in this case is left to right, hence the addition gets called first.
 
+Coercion
+--------
+Converting a value from a type to another.
 
+```javascript
+var a = 1 + '2';
+console.log(a); // 12..1 has been coerced to a string.
+```
