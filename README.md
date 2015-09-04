@@ -5,7 +5,21 @@ Some notes I took while trying to understand how JS works under the hood.
 
 The snippet of code can be easily executed here: http://jsbin.com/?js,console
 
-Important concept to understand before starting:
+Table of contents
+=================
+* [Executions contexts, Lexical environments, scopes](https://github.com/barbasa/JSUnderTheHood#executions-contexts-lexical-environments-scopes)
+  * [Syntax parser](https://github.com/barbasa/JSUnderTheHood#syntax-parser)
+  * [Lexical environment](https://github.com/barbasa/JSUnderTheHood#lexical-environment)
+  * [Execution context](https://github.com/barbasa/JSUnderTheHood#execution-context)
+  * [Creation and hoisting](https://github.com/barbasa/JSUnderTheHood#creation-and-hoisting)
+  * [Functions invocation and execution stack](https://github.com/barbasa/JSUnderTheHood#function-invocation-and-executions-stack)
+  * [Variable scope](https://github.com/barbasa/JSUnderTheHood#variable-scope)
+  * [Scope chain](https://github.com/barbasa/JSUnderTheHood#scope-chain)
+  * [Handling asynchronicity](https://github.com/barbasa/JSUnderTheHood#handling-asynchronicity)
+  * [Key value pairs: Object](https://github.com/barbasa/JSUnderTheHood#key-value-pairs-objects)
+* [Types and operator](https://github.com/barbasa/JSUnderTheHood#types-and-operators)
+  * [Primitive types](https://github.com/barbasa/JSUnderTheHood#primitive-types)
+  * [Precedence and associativity](https://github.com/barbasa/JSUnderTheHood#precedence-and-associativity)
 
 Executions contexts, Lexical environments, scopes
 ===================================================
