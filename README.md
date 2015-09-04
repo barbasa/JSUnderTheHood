@@ -20,6 +20,7 @@ Table of contents
 * [Types and operator](https://github.com/barbasa/JSUnderTheHood#types-and-operators)
   * [Primitive types](https://github.com/barbasa/JSUnderTheHood#primitive-types)
   * [Precedence and associativity](https://github.com/barbasa/JSUnderTheHood#precedence-and-associativity)
+  * [Coercion](https://github.com/barbasa/JSUnderTheHood#coercion)
 
 Executions contexts, Lexical environments, scopes
 ===================================================
