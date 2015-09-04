@@ -234,6 +234,12 @@ a();
 ```
 The output would have been **2**, since in this case the outer environment of b() is the execution context of a(). 
 
+Handling asynchronicity
+-----------------------
+JS is synchronous by nature, so how async calls are handled ?
+
+#TODO: insert gif
+
 Key value pairs: Objects
 ------------------------
 An object in JS is simply a key value pair, eg:
