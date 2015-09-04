@@ -272,3 +272,30 @@ There are 6 primitive types:
 * **string**: sequence of characters.
 * **symbol**: used in ES6.
 
+Precedence and Associativity
+----------------------------
+Operation precedence: which operator function gets called first
+Associativity: what order the operator function get called in when functions have the same precedence, i.e.: right to left or viceversa
+
+Here a table to refer to for precedence and associativity: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Operator_Precedence
+
+Here an example with comments:
+
+```javascript
+var a =     // Assignement has a precedence of 3
+        2 + // Addition has a precedence of 13
+        3 * // Multiplication has a precedence of 18
+        5;
+```
+The operation with higher precedence get called first...hence the multiplication in this case.
+
+```javascript
+var b =     // Assignement has a precedence of 3
+        2 + // Addition has a precedence of 13
+        3 - // Subtraction has a precedence of 13
+        5;
+
+```
+Subtraction and addition have the same precedence. In order to decide which one to call first we need to check the associativity, which in this case is left to right, hence the addition gets called first.
+
+
