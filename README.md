@@ -21,6 +21,7 @@ Table of contents
   * [Primitive types](https://github.com/barbasa/JSUnderTheHood#primitive-types)
   * [Precedence and associativity](https://github.com/barbasa/JSUnderTheHood#precedence-and-associativity)
   * [Coercion](https://github.com/barbasa/JSUnderTheHood#coercion)
+  * [Comparison Operators](https://github.com/barbasa/JSUnderTheHood#comparison-operators)
 
 Executions contexts, Lexical environments, scopes
 ===================================================
@@ -327,3 +328,24 @@ Converting a value from a type to another.
 var a = 1 + '2';
 console.log(a); // 12..1 has been coerced to a string.
 ```
+
+Comparison operators
+--------------------
+The following example seems pretty obvious:
+
+```javascript
+console.log(1 < 2 < 3); // true
+```
+What about this other ?
+
+```javascript
+console.log(3 < 2 < 1); //true!!!
+```
+Let's try to explain it:
+* We have 3 *"less than"* operators, hence they have the same precedence
+* The associativity is left to right, this means that the first operation to be computed will be *3 < 2*, which returns *false*
+* We now have the following:
+```javascript
+console.log(false < 1);
+```
+* JS will coerce *false* to a number which is *0*, hence the evaluation of *0 < 1* returns *true*
