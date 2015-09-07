@@ -23,6 +23,7 @@ Table of contents
   * [Coercion](https://github.com/barbasa/JSUnderTheHood#coercion)
   * [Comparison Operators](https://github.com/barbasa/JSUnderTheHood#comparison-operators)
   * [Particular cases of coersion](https://github.com/barbasa/JSUnderTheHood#particular-cases-of-coersion)
+* [Objects and functions](https://github.com/barbasa/JSUnderTheHood#objects-and-functions)
 
 Executions contexts, Lexical environments, scopes
 ===================================================
@@ -257,29 +258,6 @@ JS is synchronous by nature, so how async calls are handled ?
 
 ![alt text](https://github.com/barbasa/JSUnderTheHood/blob/master/assets/async.gif  "asynchronicity")
 
-Key value pairs: Objects
-------------------------
-An object in JS is simply a key value pair, eg:
-
-```javascript
-var currentPerson = {
-  name: 'smith',
-  surname: 'john'
-};
-console.log(currentPerson);
-```
-An object can also be created this way:
-
-```javascript
-var currentPerson = new Object();
-currentPerson.name = 'smith';
-currentPerson.surname = 'john';
-```
-
-> BEST PRACTICE: The first way of creating an object is called *object literal notation* and it is preferred to the second.
-
-The 2 ways are equivalent. The former is recognised to be quicker and it requires less typing than the latter.
-
 Types and operators
 ===================
 
@@ -402,3 +380,29 @@ Another useful case where coercion is leveraged is the value defaulting:
 ```javascript
 var a = a || 1; // If a is undefined it will coerce to 0 and 0 || 1 => 1
 ```
+
+Objects and functions
+=====================
+
+Key value pairs: Objects
+------------------------
+An object in JS is simply a key value pair, eg:
+
+```javascript
+var currentPerson = {
+  name: 'smith',
+  surname: 'john'
+};
+console.log(currentPerson);
+```
+An object can also be created this way:
+
+```javascript
+var currentPerson = new Object();
+currentPerson.name = 'smith';
+currentPerson.surname = 'john';
+```
+
+> BEST PRACTICE: The first way of creating an object is called *object literal notation* and it is preferred to the second.
+
+The 2 ways are equivalent. The former is recognised to be quicker and it requires less typing than the latter.
