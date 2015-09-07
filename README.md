@@ -377,3 +377,23 @@ null < 1; //true!!!! null doesn't coerce to 0 for comparison only!!
 "3" === 3 //false
 ```
 See the table under the "A model for understanding equality comparisons?" [here](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Equality_comparisons_and_sameness) for more details.
+
+If you wanna check for definedeness of a variable coercion plays an important role, see the example to explain why:
+
+```javascript
+// a will be coerced to true, so we will get into the if
+var a = 1;
+if (a) {
+ console.log('Defined!');
+}
+// b will be coerced to false, so we won't get into the if even if we want to!
+var b = 0;
+if (b) {
+ console.log('Defined!');
+}
+// in this case we are checking for defindness. c === 0 will coerce to true, and false || true will return true!
+var c = 0;
+if (c || c === 0) {
+ console.log('Defined!');
+}
+```
