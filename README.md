@@ -397,3 +397,8 @@ if (c || c === 0) {
  console.log('Defined!');
 }
 ```
+Another useful case where coercion is leveraged is the value defaulting:
+
+```javascript
+var a = a || 1; // If a is undefined it will coerce to 0 and 0 || 1 => 1
+```
