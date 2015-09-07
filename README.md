@@ -253,7 +253,7 @@ Handling asynchronicity
 -----------------------
 JS is synchronous by nature, so how async calls are handled ?
 
-#TODO: insert gif
+![alt text](https://github.com/barbasa/JSUnderTheHood/blob/master/assets/async.gif  "asynchronicity")
 
 Key value pairs: Objects
 ------------------------
