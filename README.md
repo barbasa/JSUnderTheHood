@@ -16,7 +16,6 @@ Table of contents
   * [Variable scope](https://github.com/barbasa/JSUnderTheHood#variable-scope)
   * [Scope chain](https://github.com/barbasa/JSUnderTheHood#scope-chain)
   * [Handling asynchronicity](https://github.com/barbasa/JSUnderTheHood#handling-asynchronicity)
-  * [Key value pairs: Object](https://github.com/barbasa/JSUnderTheHood#key-value-pairs-objects)
 * [Types and operator](https://github.com/barbasa/JSUnderTheHood#types-and-operators)
   * [Primitive types](https://github.com/barbasa/JSUnderTheHood#primitive-types)
   * [Precedence and associativity](https://github.com/barbasa/JSUnderTheHood#precedence-and-associativity)
@@ -24,6 +23,7 @@ Table of contents
   * [Comparison Operators](https://github.com/barbasa/JSUnderTheHood#comparison-operators)
   * [Particular cases of coersion](https://github.com/barbasa/JSUnderTheHood#particular-cases-of-coersion)
 * [Objects and functions](https://github.com/barbasa/JSUnderTheHood#objects-and-functions)
+  * [Key value pairs: Object](https://github.com/barbasa/JSUnderTheHood#key-value-pairs-objects)  
 
 Executions contexts, Lexical environments, scopes
 ===================================================
