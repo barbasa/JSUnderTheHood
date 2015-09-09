@@ -23,7 +23,8 @@ Table of contents
   * [Comparison Operators](https://github.com/barbasa/JSUnderTheHood#comparison-operators)
   * [Particular cases of coersion](https://github.com/barbasa/JSUnderTheHood#particular-cases-of-coersion)
 * [Objects and functions](https://github.com/barbasa/JSUnderTheHood#objects-and-functions)
-  * [Key value pairs: Object](https://github.com/barbasa/JSUnderTheHood#key-value-pairs-objects)  
+  * [Key value pairs: Object](https://github.com/barbasa/JSUnderTheHood#key-value-pairs-objects)
+  * [Functions](https://github.com/barbasa/JSUnderTheHood#functions)
 
 Executions contexts, Lexical environments, scopes
 ===================================================
@@ -456,3 +457,22 @@ console.log(currentPerson[currentKey]);
 >
 > var myOtherOtherObject = new Object();
 > myOtherOtherObject["name"] = "Gino";
+
+Functions
+---------
+* Functions are "first class functions", you can do with them what you can do with other types (assign them to variable, pass them, etc).
+* Functions are special types of objects, they have all the features of an object plus other properties:
+ * **Name**: optionally can have a name. It can also be anonymous.
+ * **Code**: the code written to implement the function. The *code* property is invocable via the **()** operator.
+ 
+The implications are for example these:
+
+```javascript
+function person() {
+ console.log('Yo yo');
+}
+
+person.name = 'Luigi'; // Not common in other languages!!!
+
+console.log(person); // returns the code!
+```
