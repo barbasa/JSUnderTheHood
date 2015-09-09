@@ -411,3 +411,23 @@ currentPerson.surname = 'john';
 > BEST PRACTICE: The first way of creating an object is called *object literal notation* and it is preferred to the second.
 
 The 2 ways are equivalent. The former is recognised to be quicker and it requires less typing than the latter.
+
+Objects can also contain other objects as values:
+
+```javascript
+var currentPerson = {
+  name: 'smith',
+  address: {
+   street: 'Rome Road',
+   postcode: 'W450RE'
+  }
+};
+```
+
+> *SYNTAX*: objects
+> ```javascript
+> var myObject = {
+>   key1: 'value1',
+>   key2: object2,
+>   ....
+>};
