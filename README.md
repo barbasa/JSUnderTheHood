@@ -258,6 +258,11 @@ JS is synchronous by nature, so how async calls are handled ?
 
 ![alt text](https://github.com/barbasa/JSUnderTheHood/blob/master/assets/async.gif  "asynchronicity")
 
+* Apart for the execution stack there is another list that sits inside the JS engine, the *Events Queue*
+* When there is an event in the broweser that we want to be notified inside the JS engine, it gets pushed to the queue
+* When the execution stack is empty, the JS engine checks the *Events Queue* and if there is a function to run corresponding the event, the execution stack for that function is created and executed
+* The code is running in a **synchronous** way, but the browser is putting **asynchronously** events in the *Events Queue*
+
 Types and operators
 ===================
 
