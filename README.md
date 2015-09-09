@@ -427,7 +427,26 @@ var currentPerson = {
 > *SYNTAX*: objects
 > ```javascript
 > var myObject = {
->   key1: 'value1',
->   key2: object2,
+>   key1: primitive_value, // "property"
+>   key2: object, // "propery"
+>   key3: function // "method"
 >   ....
 >};
+> myObject.key1   // returns key1 value
+> myObject.key2   // returns object
+> myObject.key3() // execute function
+
+Another way of creating an object is using the *Computed Member Access*
+
+```javascript
+var currentPerson = new Object();
+currentPerson["name"] = "Ciccio";
+currentPerson["surname"] = "Pasticcio";
+```
+
+The nice thing about the *Computed Member Access* is that it is possible to dynamically change the value we want to access, for example:
+
+```javascript
+var currentKey = "name";
+console.log(currentPerson[currentKey]);
+```
