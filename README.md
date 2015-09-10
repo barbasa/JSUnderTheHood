@@ -26,6 +26,7 @@ Table of contents
   * [Key value pairs: Object](https://github.com/barbasa/JSUnderTheHood#key-value-pairs-objects)
   * [Functions](https://github.com/barbasa/JSUnderTheHood#functions)
   * [By reference Vs by value](https://github.com/barbasa/JSUnderTheHood#by-reference-vs-by-value)
+  * ["This"](https://github.com/barbasa/JSUnderTheHood#-this-)
 
 Executions contexts, Lexical environments, scopes
 ===================================================
@@ -544,3 +545,80 @@ changeStuff(a);
 
 console.log(a);
 ```
+"This"
+------
+We have seen before the object *This* is created with the execution context and it points to the global object.
+
+Let's see some example:
+```javascript
+function a(){
+ console.log(this);
+ this.newVar = 'Ciccio';
+}
+
+var b = function(){
+ console.log(this);
+}
+
+a();
+console.log(newVar);
+b();
+```
+In all the places *this* points to the global object.
+
+In this other case:
+
+```javascript
+var c = {
+ name: 'Here is C',
+ doStuff: function() {
+  console.log(this);
+ } 
+};
+c.doStuff();
+```
+*This* will point to the object the method is sitting inside of.
+
+Let's see a further example:
+
+```javascript
+var c = {
+ name: 'Here is C',
+ doStuff: function() {
+  this.name = 'Updated C';
+  console.log(this);
+  
+  var setname = function(newname) {
+   this.name = newname;
+  }
+  setname('Re-updated C');
+  console.log(this);
+ } 
+};
+c.doStuff();
+
+```
+This is the strangest case...we would expect to see *setname* to update the value of *this* internal to the object...but this is not true. The way the JS Engine works it updated the global object!?!?!
+
+To avoid this issue we can do like that:
+
+```javascript
+var c = {
+ name: 'Here is C',
+ doStuff: function() {
+  self = this;
+  self.name = 'Updated C';
+  console.log(self);
+  
+  var setname = function(newname) {
+   self.name = newname;
+  }
+  setname('Re-updated C');
+  console.log(self);
+ } 
+};
+c.doStuff();
+
+```
+
+This is a common pattern that you will.
