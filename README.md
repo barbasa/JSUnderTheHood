@@ -505,4 +505,17 @@ var doStuff = function() {
 ```
 We would get an *Uncaught TypeError: undefined is not a function*! This happens because of the hoisting.The *doStuff* variable is initialised to *undefined*, hence the error we get when we try to invoke the function. It is like if we are trying to do this: *undefined()*.
 
+Another implication of a function being an object is the following:
 
+```javascript
+
+function doStuff(param) {
+ param();
+}
+
+doStuff(function() {
+ console.log('Yo yo');
+});
+
+```
+What would have happened if in *doStuff* we would have put: *console.log(param)* instead of *param()*?
