@@ -25,6 +25,7 @@ Table of contents
 * [Objects and functions](https://github.com/barbasa/JSUnderTheHood#objects-and-functions)
   * [Key value pairs: Object](https://github.com/barbasa/JSUnderTheHood#key-value-pairs-objects)
   * [Functions](https://github.com/barbasa/JSUnderTheHood#functions)
+  * [By reference Vs by value](https://github.com/barbasa/JSUnderTheHood#by-reference-vs-by-value)
 
 Executions contexts, Lexical environments, scopes
 ===================================================
@@ -519,3 +520,13 @@ doStuff(function() {
 
 ```
 What would have happened if in *doStuff* we would have put: *console.log(param)* instead of *param()*?
+
+By reference Vs by value
+------------------------
+When assigning variables to primitive values a new copy of the value is created:
+
+![alt text](https://github.com/barbasa/JSUnderTheHood/blob/master/assets/byValue.png  "by value")
+
+When assigning variables to object all the variables will point to the same object:
+
+![alt text](https://github.com/barbasa/JSUnderTheHood/blob/master/assets/byRef.png  "by reference")
