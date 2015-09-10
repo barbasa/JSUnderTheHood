@@ -476,3 +476,33 @@ person.name = 'Luigi'; // Not common in other languages!!!
 
 console.log(person); // returns the code!
 ```
+
+Since functions are objects you can do thing like:
+
+```javascript
+var doStuff = function() {
+ console.log('Yo yo');
+}
+
+doStuff(); // prints 'Yo yo'
+```
+
+What would happen if we would have run the code this way instead ?
+
+```javascript
+hello();
+
+function hello() {
+ console.log('Hello!');
+}
+
+doStuff();
+
+var doStuff = function() {
+ console.log('Yo yo');
+}
+
+```
+We would get an *Uncaught TypeError: undefined is not a function*! The reason why is waht we saw before. Initially the *doStuff* variable is initialised to *undefined*, hence the error we get when we try to invoke the function. It is like if we are trying to do this: *undefined()*.
+
+
