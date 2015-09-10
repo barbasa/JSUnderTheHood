@@ -26,7 +26,7 @@ Table of contents
   * [Key value pairs: Object](https://github.com/barbasa/JSUnderTheHood#key-value-pairs-objects)
   * [Functions](https://github.com/barbasa/JSUnderTheHood#functions)
   * [By reference Vs by value](https://github.com/barbasa/JSUnderTheHood#by-reference-vs-by-value)
-  * ["This"](https://github.com/barbasa/JSUnderTheHood#-this-)
+  * ["This"](https://github.com/barbasa/JSUnderTheHood#this)
 
 Executions contexts, Lexical environments, scopes
 ===================================================
