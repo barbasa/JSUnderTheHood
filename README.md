@@ -503,6 +503,6 @@ var doStuff = function() {
 }
 
 ```
-We would get an *Uncaught TypeError: undefined is not a function*! The reason why is waht we saw before. Initially the *doStuff* variable is initialised to *undefined*, hence the error we get when we try to invoke the function. It is like if we are trying to do this: *undefined()*.
+We would get an *Uncaught TypeError: undefined is not a function*! This happens because of the hoisting.The *doStuff* variable is initialised to *undefined*, hence the error we get when we try to invoke the function. It is like if we are trying to do this: *undefined()*.
 
 
