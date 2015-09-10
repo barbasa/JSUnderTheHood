@@ -530,3 +530,17 @@ When assigning variables to primitive values a new copy of the value is created:
 When assigning variables to object all the variables will point to the same object:
 
 ![alt text](https://github.com/barbasa/JSUnderTheHood/blob/master/assets/byRef.png  "by reference")
+
+The implication of this is that we could end up in situation like:
+
+```javascript
+
+var a = { name: 'ciccio' };
+
+function changeStuff(obj) {
+ obj.name = 'pasticcio';
+}
+changeStuff(a);
+
+console.log(a);
+```
