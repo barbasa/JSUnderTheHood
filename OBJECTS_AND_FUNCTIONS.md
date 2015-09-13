@@ -231,3 +231,31 @@ c.doStuff();
 ```
 
 This is a common pattern that you will.
+
+Arrays
+------
+Arrays is a collection. In JS they are zero based.
+
+> *SYNTNAX*: array declaration
+> var arr1 = new Array();
+> var arr2 = []; //array literal syntax
+
+Arrays can contain different type of elements:
+
+```javascript
+var arr = [
+  1,
+  false,
+  {
+    name: 'gino',
+    surname: 'strada'
+  },
+  function(name) {
+    console.log('hello' + name);
+  },
+  "YO YO"
+];
+
+arr[3](arr[2].name);
+```
+
