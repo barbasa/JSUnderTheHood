@@ -279,5 +279,48 @@ doStuff('gino', 'strada'); // arguments will be ['gino', 'strada']
 ```
 Immediately Invoked Function Expressions (IIFEs)
 ------------------------------------------------
+Functions can be invoked at the moment they are created:
+
+```javascript
+var doStuff = function(name) {
+  console.log(name);
+}('gino');
+```
+
+If you want a function statement to be treated as a function expression, you can do this in JS:
+
+```javascript
+(function(name) {
+  return 'Hey' + name; 
+});
+```
+This is a way of "cheating" the intepreter, because everything between parethesys has to be an expression, it cannot be a statement.
+
+You can create a function expression on the fly and invoking it. It is a classical example of IIFE and it is a widely used pattern:
+
+```javascript
+var a = 'ciccio';
+
+(function(name){
+  console.log('Hi' + name);
+}(a)); //Hi ciccio
+
+(function(name){
+  console.log('Hello' + name);
+})(a); //Hello ciccio
+
+```
+Notice that the previous 2 examples are slighlty different but they both work.
+
+The great advantage of IIFEs is that they are really useful to write safe code. The variables created inside it don't belong to the global execution context. This way is possible to avoid collision between variables called in the same way by different libraries, ex:
+
+```javascript
+var a = 'Mr';
+
+(function(name){
+  var a = 'Miss';
+  console.log('Hi' + a + name);
+}('Carla')); //Hi Miss Carls
+```
 
 
