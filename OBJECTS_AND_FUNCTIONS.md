@@ -261,7 +261,7 @@ arr[3](arr[2].name);
 
 Arguments
 ---------
-The *arguments* keyword contains the arguments passed to a JS function. It looks like an array but it is slightly different.
+The *arguments* keyword contains the arguments passed to a JS function. It looks like an array but it is not a proper JS array, check [here](https://developer.mozilla.org/en/docs/Web/JavaScript/Reference/Functions/arguments) why.
 
 ```javascript
 function doStuff(name,surname,lang) {
