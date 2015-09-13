@@ -277,6 +277,7 @@ function doStuff(name,surname,lang) {
 
 doStuff('gino', 'strada'); // arguments will be ['gino', 'strada']
 ```
-
+Immediately Invoked Function Expressions (IIFEs)
+------------------------------------------------
 
 
