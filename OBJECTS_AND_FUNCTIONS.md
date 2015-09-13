@@ -323,4 +323,12 @@ var a = 'Mr';
 }('Carla')); //Hi Miss Carls
 ```
 
+If you want to have access to the global object inside the IIFE you can pass it as parameter:
 
+```javascript
+(function(global, name){
+  var a = 'Miss';
+  console.log('Hi' + a + name);
+}(window, 'Carla')); //Hi Miss Carls
+
+```
