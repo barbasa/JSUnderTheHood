@@ -259,3 +259,24 @@ var arr = [
 arr[3](arr[2].name);
 ```
 
+Arguments
+---------
+The *arguments* keyword contains the arguments passed to a JS function. It looks like an array but it is slightly different.
+
+```javascript
+function doStuff(name,surname,lang) {
+  
+  if(arguments.length === 0) {
+    console.log('Missing parameters!');
+    return;
+  }
+  
+  //...
+  
+}
+
+doStuff('gino', 'strada'); // arguments will be ['gino', 'strada']
+```
+
+
+
