@@ -28,3 +28,6 @@ Table of contents
   * [By reference Vs by value](https://github.com/barbasa/JSUnderTheHood/blob/master//OBJECTS_AND_FUNCTIONS.md#by-reference-vs-by-value)
   * ["This"](https://github.com/barbasa/JSUnderTheHood/blob/master//OBJECTS_AND_FUNCTIONS.md#this)
   * [Arrays](https://github.com/barbasa/JSUnderTheHood/blob/master/OBJECTS_AND_FUNCTIONS.md#arrays)
+  * [Parameters](https://github.com/barbasa/JSUnderTheHood/blob/master/OBJECTS_AND_FUNCTIONS.md#parameters)
+  * [IIFEs](https://github.com/barbasa/JSUnderTheHood/blob/master/OBJECTS_AND_FUNCTIONS.md#immediately-invoked-function-expressions-iifes)
+  
