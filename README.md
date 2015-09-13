@@ -27,3 +27,4 @@ Table of contents
   * [Functions](https://github.com/barbasa/JSUnderTheHood/blob/master//OBJECTS_AND_FUNCTIONS.md#functions)
   * [By reference Vs by value](https://github.com/barbasa/JSUnderTheHood/blob/master//OBJECTS_AND_FUNCTIONS.md#by-reference-vs-by-value)
   * ["This"](https://github.com/barbasa/JSUnderTheHood/blob/master//OBJECTS_AND_FUNCTIONS.md#this)
+  * [Arrays](https://github.com/barbasa/JSUnderTheHood/blob/master/OBJECTS_AND_FUNCTIONS.md#arrays)
