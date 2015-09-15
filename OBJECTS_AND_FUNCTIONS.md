@@ -371,4 +371,62 @@ Let's try to understand what happened:
 * This phenomena of having access to the variable which an environment is supposed to have access to, even if the variable execution context is gone, is called **Closure**
 * ![alt text](https://github.com/barbasa/JSUnderTheHood/blob/master/assets/Closure4.png  "Closure 4")
 
+Let's see another example:
+
+```javascript
+function buildFunctions() {
+  var arr = [];
+  
+  for (var i =0; i < 3; i++) {
+    arr.push(
+      function(){
+        console.log(i);
+      }
+    )
+  }
+
+  return arr;
+}
+
+var f = buildFunction();
+
+f[0]();
+f[1]();
+f[2]();
+```
+What is the result of each function invocation ? **3!!??**
+
+The reason for that to happen is that when *buildFunction()* is called *console.log()* in not executed!
+
+What if I wanted to print out 1,2,3 instead ?
+
+In order to do that I will need a new execution context for each function that will be executed:
+
+```javascript
+function buildFunctions() {
+  var arr = [];
+  
+  for (var i =0; i < 3; i++) {
+    let j = i;
+    arr.push(
+      // Every time we get here we have an IIFE, so a new execution context is created
+      // and j will be stored in each one of them
+      (function(j){
+        // Now I can create the closure
+        return function(){
+          console.log(j);
+        }
+      }(i))
+    )
+  }
+
+  return arr;
+}
+
+var f = buildFunction();
+
+f[0]();
+f[1]();
+f[2]();
+```
 
