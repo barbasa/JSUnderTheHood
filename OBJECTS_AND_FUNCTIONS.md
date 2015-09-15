@@ -332,3 +332,33 @@ If you want to have access to the global object inside the IIFE you can pass it 
 }(window, 'Carla')); //Hi Miss Carls
 
 ```
+Closure
+-------
+Lets start with an example:
+
+```javascript
+function greet(say) {
+  return function(name) {
+    console.log(say + ' ' + name);
+  }
+}
+
+var sayHi = greet('Hi');
+sayHi('Ciccio'); //equivalent to -> greet('Hi')('Ciccio');
+
+```
+When I call *greet('Hi')* the variable *say* is created. Once the greet function is executed the execution context disappear, but it looks like the *say* variable is still hanging around!
+
+Let's try to understand what happened:
+
+![alt text](https://github.com/barbasa/JSUnderTheHood/blob/master/assets/Closure1.png  "Closure 1")
+
+![alt text](https://github.com/barbasa/JSUnderTheHood/blob/master/assets/Closure2.png  "Closure 2")
+
+![alt text](https://github.com/barbasa/JSUnderTheHood/blob/master/assets/Closure3.png  "Closure 3")
+
+![alt text](https://github.com/barbasa/JSUnderTheHood/blob/master/assets/Closure4.png  "Closure 4")
+
+
+
+
