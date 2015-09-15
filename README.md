@@ -30,4 +30,5 @@ Table of contents
   * [Arrays](https://github.com/barbasa/JSUnderTheHood/blob/master/OBJECTS_AND_FUNCTIONS.md#arrays)
   * [Parameters](https://github.com/barbasa/JSUnderTheHood/blob/master/OBJECTS_AND_FUNCTIONS.md#parameters)
   * [IIFEs](https://github.com/barbasa/JSUnderTheHood/blob/master/OBJECTS_AND_FUNCTIONS.md#immediately-invoked-function-expressions-iifes)
+  * [Closures](https://github.com/barbasa/JSUnderTheHood/blob/master/OBJECTS_AND_FUNCTIONS.md#closures)
   
