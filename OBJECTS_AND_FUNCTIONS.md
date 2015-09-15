@@ -351,6 +351,28 @@ When I call *greet('Hi')* the variable *say* is created. Once the greet function
 
 Let's try to understand what happened:
 
+* The global execution context is created
+* When *greet()* is invoked a new execution context is created
+* The *say* variable passed to the function is there in the varible environment
+
+------
+
+* *greet()* returns a new function object
+* After the return the *greet()* execution context is gone
+* The *say* variable anyway is still there, the Garbage Collector hasn't get rid of it
+
+------
+
+* Now we are again in the global execution context and we invoke *sayHi()*
+* A new execution context is created
+
+------
+
+* When we hit the *console.log()* the JS engine will look for the *say* variable in the scope chain
+* The JS engine make sure that what was in memory in the previous execution context stays there
+* The current execution context is closed in its outer varaibles
+* This phenomena of having access to the variable which an environment is supposed to have access to, even if the variable execution context is gone, is called **Closure**
+
 ![alt text](https://github.com/barbasa/JSUnderTheHood/blob/master/assets/Closure1.png  "Closure 1")
 
 ![alt text](https://github.com/barbasa/JSUnderTheHood/blob/master/assets/Closure2.png  "Closure 2")
@@ -358,7 +380,5 @@ Let's try to understand what happened:
 ![alt text](https://github.com/barbasa/JSUnderTheHood/blob/master/assets/Closure3.png  "Closure 3")
 
 ![alt text](https://github.com/barbasa/JSUnderTheHood/blob/master/assets/Closure4.png  "Closure 4")
-
-
 
 
