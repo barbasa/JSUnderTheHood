@@ -429,4 +429,31 @@ f[0]();
 f[1]();
 f[2]();
 ```
+Closures and callbacks
+----------------------
+Let's have a look at this example:
+
+```javascript
+function sayHiLater() {
+  var greeting = 'Hi';
+  
+  setTimeout(function(){
+    console.log(greeting);
+  }, 3000);
+}
+
+sayHiLater();
+```
+These example contains loads of the concepts we have seen until now like function expression and closures.
+
+Here what happens when the code runs:
+* *setTimeout* is a JS function that evaluate an expression after a certain timeout (3 secs in our case)
+* the first parameter is a function, in this case we are using a function expression
+* *setTimeout* drops an event in the event queue when the timeouot is finished
+* the JS engine sees the event and it checks if there is any function able to serve it
+* the function set to serve it is the first parameter if *setTimeout* and it is called **callback**
+* when the callback is called the *greeting* variable will be still available thanks to the closure...*sayHiLater* takes ms to run but still after 3 sec *greeting* is available
+
+A **callback** is a function you give to another one, to be run when the other function is finished. 
+
 
