@@ -15,8 +15,8 @@ There are 6 primitive types:
 
 Precedence and Associativity
 ----------------------------
-Operation precedence: which operator function gets called first
-Associativity: what order the operator function get called in when functions have the same precedence, i.e.: right to left or viceversa
+* *Operation precedence*: which operator function gets called first
+* *Associativity*: what order the operator function get called in when functions have the same precedence, i.e.: right to left or viceversa
 
 Here a table to refer to for precedence and associativity: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Operator_Precedence
 
