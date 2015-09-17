@@ -11,7 +11,6 @@ There are 6 primitive types:
 * **boolean**: true or false
 * **number**: floating point number. It is the only numeric type.
 * **string**: sequence of characters.
-* **symbol**: used in ES6.
 
 Precedence and Associativity
 ----------------------------
