@@ -456,4 +456,30 @@ Here what happens when the code runs:
 
 A **callback** is a function you give to another one, to be run when the other function is finished. 
 
+call(), apply() and bind()
+--------------------------
+All functions have access to the call(), apply() and bind() methods.
 
+Let's start with an example for *bind()*:
+
+```javascript
+var person = {
+  firstname: 'Carlo',
+  lastname: 'Cascina',
+  getFullName: function() {
+    console.log(firstname + ' ' + lastname);
+  }
+}
+
+var logName = function(lang1, lang2) {
+  console.log('Logged: ' + this.getFullName() );
+  console.log('Params: ' + lang1 + ' ' + lang2 );
+}
+
+// the 'this' variable in the logName function will point to the 'person' object
+var logPersonName = logName.bind(person);
+
+logPersonName('en');
+```
+
+*bind()* create a copy of the function calling it, hence a new execution context, where *'this'* become the object passed to the method. 
