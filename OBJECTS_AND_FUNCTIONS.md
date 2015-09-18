@@ -506,3 +506,32 @@ It is also possible to do it on the fly like this:
 }).apply(person, ['en','it']);
 
 ```
+This can be useful to do what is called **function borrowing**:
+
+```javascript
+var person2 = {
+  firstname: 'Ciccio',
+  lastname: 'Pasticcio'
+};
+person.getFullName.apply(person2);
+```
+In this case the *'this'* into *getFullName* will refer to *person2*
+
+Another interesting usage is the **function currying**:
+
+```javascript
+function multiply(a,b) {
+  return a*b;
+}
+
+ //In this case we are setting the variable 'a' to a fix value when the copy of the function is created
+var multiplyByTwo = multiply(this,2);
+// It is equivalent to:
+function multiplyByTwoBis(b) {
+  var a = 2;
+  return a*b;
+}
+multiplyByTwo(6); // Will return 12, since b will be set to 6
+
+```
+Basically *currying* is the creation of the copy of a function with some preset parameters. 
