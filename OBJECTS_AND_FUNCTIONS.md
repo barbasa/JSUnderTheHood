@@ -483,3 +483,26 @@ logPersonName('en');
 ```
 
 *bind()* create a copy of the function calling it, hence a new execution context, where *'this'* become the object passed to the method. 
+
+Using the same example let's use *call()*:
+
+```javascript
+logName.call(person, 'en', 'it');
+```
+*call()* despite *bind()* doesn't create a new copy of the function. The first parameter passed is the *'this'* which will be used when the function is invoked.
+
+*apply()* is really similar to *call()*, the only difference is that it requires an array as second parameter:
+
+```javascript
+logName.apply(person, ['en', 'it']);
+```
+It is also possible to do it on the fly like this:
+
+```javascript
+
+(function(lang1, lang2) {
+  console.log('Logged: ' + this.getFullName() );
+  console.log('Params: ' + lang1 + ' ' + lang2 );
+}).apply(person, ['en','it']);
+
+```
