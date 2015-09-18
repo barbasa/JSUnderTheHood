@@ -32,4 +32,5 @@ Table of contents
   * [IIFEs](https://github.com/barbasa/JSUnderTheHood/blob/master/OBJECTS_AND_FUNCTIONS.md#immediately-invoked-function-expressions-iifes)
   * [Closure](https://github.com/barbasa/JSUnderTheHood/blob/master/OBJECTS_AND_FUNCTIONS.md#closure)
   * [Closures and Callbacks](https://github.com/barbasa/JSUnderTheHood/blob/master/OBJECTS_AND_FUNCTIONS.md#closures-and-callbacks)
+  * [call(), apply() and bind()] https://github.com/barbasa/JSUnderTheHood/blob/master/OBJECTS_AND_FUNCTIONS.md#call-apply-and-bind
   
