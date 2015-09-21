@@ -33,4 +33,4 @@ Table of contents
   * [Closure](https://github.com/barbasa/JSUnderTheHood/blob/master/OBJECTS_AND_FUNCTIONS.md#closure)
   * [Closures and Callbacks](https://github.com/barbasa/JSUnderTheHood/blob/master/OBJECTS_AND_FUNCTIONS.md#closures-and-callbacks)
   * [call(), apply() and bind()](https://github.com/barbasa/JSUnderTheHood/blob/master/OBJECTS_AND_FUNCTIONS.md#call-apply-and-bind)
-  
+* [OO JS and prototypal Inheritance](https://github.com/barbasa/JSUnderTheHood/blob/master/OOJS_AND_PROTOTYPAL_INHERITANCE.md)
