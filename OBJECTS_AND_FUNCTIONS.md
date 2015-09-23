@@ -69,6 +69,19 @@ console.log(currentPerson[currentKey]);
 > var myOtherOtherObject = new Object();
 > myOtherOtherObject["name"] = "Gino";
 
+A further way of creating ojects is the following:
+
+```javascript
+function Person() {
+  this.firstname = 'Ciccio';
+  this.lastname = 'Pasticiccio';
+}
+
+var ciccio = new Person();
+```
+What we are doing is calling a function used to specifically construct an object.
+We create a new object and then call a function on the new object where *this* refers to the new created object.
+
 Functions
 ---------
 * Functions are "first class functions", you can do with them what you can do with other types (assign them to variable, pass them, etc).
