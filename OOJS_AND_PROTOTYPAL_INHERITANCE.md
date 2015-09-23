@@ -12,3 +12,6 @@ TODO: add image with prototype chain
 
 See for example what the prototype object is for a base object, an array and a function.
 
+Reflection and extend
+---------------------
+* Reflection: an object can look at itself, listing and changing its properties and methods.
